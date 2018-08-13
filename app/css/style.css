@@ -1,0 +1,328 @@
+@font-face {
+  font-family: 'icomoon';
+  src: url("../fonts/icomoon.eot?cwhh4a");
+  src: url("../fonts/icomoon.eot?cwhh4a#iefix") format("embedded-opentype"), url("../fonts/icomoon.ttf?cwhh4a") format("truetype"), url("../fonts/icomoon.woff?cwhh4a") format("woff"), url("../fonts/icomoon.svg?cwhh4a#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.b-header__toggle::before {
+  font-family: 'icomoon' !important;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+  outline: none;
+}
+
+body {
+  margin: 0;
+  overflow-x: hidden;
+  font-family: "DINPro-CondensedMedium", sans-serif;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+img {
+  max-width: 100%;
+  border: none;
+  outline: none;
+}
+
+a {
+  border: none;
+  outline: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+select::-ms-expand {
+  display: none;
+}
+
+.container {
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+.b-hero__circle {
+  background-image: url(../img/circle.png);
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  position: absolute;
+}
+
+.b-header {
+  position: absolute;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding-top: 75px;
+}
+
+.b-header__inner {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.b-header__logo {
+  width: 170px;
+}
+
+.b-header__toggle {
+  width: 45px;
+  height: 45px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+.b-header__toggle::before {
+  content: '\e900';
+  color: #fff;
+  font-size: 25px;
+}
+
+.b-hero {
+  background-color: #1DAFED;
+  overflow: hidden;
+  position: relative;
+}
+
+.b-hero__inner {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  min-height: 660px;
+  position: relative;
+}
+
+.b-hero__slogan {
+  margin: 0;
+  font-size: 48px;
+  line-height: 49px;
+  color: #fff;
+  padding-left: 35px;
+  position: relative;
+}
+
+.b-hero__slogan::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  width: 20px;
+  background-image: url(../img/dot.png);
+  background-repeat: repeat-y;
+}
+
+.b-hero__circle {
+  width: 400px;
+  height: 400px;
+}
+
+.b-hero__circle--1 {
+  top: 180px;
+  left: -200px;
+}
+
+.b-hero__circle--2 {
+  top: 350px;
+  right: -200px;
+}
+
+.b-portfolio__list {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  margin: 0 -15px;
+}
+
+.b-portfolio__item {
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 400px;
+  -ms-flex: 0 1 400px;
+  flex: 0 1 400px;
+  height: 400px;
+  margin: 15px;
+  padding: 50px;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+  overflow: hidden;
+}
+
+.b-portfolio__item:hover {
+  -webkit-box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.68);
+  box-shadow: 1px 1px 15px rgba(0, 0, 0, 0.68);
+}
+
+.b-portfolio__item:hover::after {
+  opacity: 1;
+  visibility: visible;
+}
+
+.b-portfolio__item:hover .b-portfolio__img {
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+.b-portfolio__item:hover .b-portfolio__name, .b-portfolio__item:hover .b-portfolio__description {
+  opacity: 1;
+  visibility: visible;
+}
+
+.b-portfolio__item::after {
+  content: '';
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(3, 112, 224, 0.9);
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
+
+.b-portfolio__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
+
+.b-portfolio__name {
+  margin: 0;
+  font-size: 34px;
+  text-transform: uppercase;
+  line-height: 1;
+  position: relative;
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+  color: inherit;
+  text-decoration: none;
+}
+
+.b-portfolio__description {
+  border-top: 1px solid #fff;
+  margin: 15px 0 0;
+  padding-top: 10px;
+  position: relative;
+  z-index: 2;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transition: all .4s;
+  -o-transition: all .4s;
+  transition: all .4s;
+}
+
+/* Desktop-frist */
+@media only screen and (max-width: 991px) {
+  /**/
+}
+
+/* Mobile-first */
+@media only screen and (min-width: 992px) {
+  /**/
+}
