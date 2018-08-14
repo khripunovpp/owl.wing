@@ -8,6 +8,8 @@ $font: 'DINPro-CondensedMedium', sans-serif
 
 html
 	box-sizing: border-box
+	width: 100%
+	height: 100%
 
 *,
 *::after,
@@ -16,11 +18,15 @@ html
 	outline: none
 
 body
+	width: 100%
+	height: 100%
 	margin: 0	
 	overflow-x: hidden
 	font-family: $font
 	line-height: 1.4
 	font-size: 14px
+	&.menu-opened
+		overflow: hidden
 
 
 img
@@ -72,8 +78,26 @@ select::-ms-expand
 .container
 	@extend %container
 
+.w-page
+	&--single
+		height: 100%
+		.w-body
+			display: flex
+			flex-direction: column
+			height: 100%
+		.b-main
+			background-color: $color
+			padding-bottom: 250px
+		.b-footer
+			background-color: #fff
+			position: relative
+			margin-top: auto
+
 .w-body
 	position: relative
+	transition: all .4s
+	&.translated
+		transform: translateX(-50%)
 
 .b-header
 	position: absolute
@@ -238,6 +262,7 @@ select::-ms-expand
 .b-main
 	overflow: hidden
 	padding: 60px 0 150px
+	height: 100%
 	&__inner
 		position: relative
 	&__title
@@ -268,13 +293,16 @@ select::-ms-expand
 		background-position: 50% 50%
 		background-size: contain
 		background-image: url(../img/dots-accent.png)
+	&__content
+		padding-top: 150px
+
 
 .b-footer
 	position: absolute
 	bottom: 0
 	left: 0
 	width: 100%
-	padding: 50px 0
+	padding: 25px 0
 	color: $color
 	&__socials,
 	&__copyright
@@ -321,6 +349,10 @@ select::-ms-expand
 	height: 100%
 	background-color: #fff
 	text-align: center
+	transform: translateX(100%)
+	transition: all .4s
+	&.opened
+		transform: translateX(0)
 	&__inner
 		height: 100%
 		display: flex
@@ -333,6 +365,8 @@ select::-ms-expand
 		display: flex
 		align-items: center
 		justify-content: center
+		position: relative
+		opacity: .99
 	&__left
 		background-color: $color
 		color: #fff
@@ -347,6 +381,7 @@ select::-ms-expand
 		border: none
 		cursor: pointer
 		background-color: transparent
+		cursor: pointer
 		&::before
 			@extend %icon
 			content: '\e901'
@@ -374,9 +409,48 @@ select::-ms-expand
 		transition: all .3s
 		&:hover
 			color: #000
+	&__circle
+		@extend %circle2
+		width: 300px
+		height: 300px
+		z-index: -1
+		&--1
+			bottom: 400px
+			left: -80px
+		&--2
+			bottom: -80px
+			right: -80px
 
-
-
+.b-portfolioSingle
+	display: flex
+	&__img
+		width: 480px
+		height: 480px
+		background-size: cover
+	&__info
+		display: flex
+		color: #fff
+		flex-direction: column
+		padding: 50px 100px
+		justify-content: space-between
+	&__name
+		text-transform: uppercase
+		font-size: 48px
+		color: inherit
+		text-decoration: none
+		display: block
+		&:hover
+			text-decoration: underline
+	&__description
+		font-size: 18px
+		display: block
+	&__cite
+		font-size: 18px
+		display: block
+		text-decoration: none
+		color: inherit
+		&:hover
+			text-decoration: underline
 
 
 

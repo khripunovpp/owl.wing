@@ -1,40 +1,26 @@
+var menu = function() {
+    var menu = $('.b-menu'),
+        tail = $('.w-body'),
+        toggleBtn = $('.b-header__toggle'),
+        closeBtn = $('.b-menu__close');
+
+    $(toggleBtn).on('click', function(event) {
+        event.preventDefault();
+        $('body').addClass('menu-opened');
+        $(tail).addClass('translated');
+        $(menu).addClass('opened');
+    });
+
+    $(closeBtn).on('click', function(event) {
+        event.preventDefault();
+        $(menu).removeClass('opened');
+        $(tail).removeClass('translated');
+        $('body').removeClass('menu-opened');
+    });
+}
+
 $(function() {
 
-	//SVG Fallback
-	if(!Modernizr.svg) {
-		$("img[src*='svg']").attr("src", function() {
-			return $(this).attr("src").replace(".svg", ".png");
-		});
-	};
-
-	//E-mail Ajax Send
-	//Documentation & Example: https://github.com/agragregra/uniMail
-	$("form").submit(function() { //Change
-		var th = $(this);
-		$.ajax({
-			type: "POST",
-			url: "mail.php", //Change
-			data: th.serialize()
-		}).done(function() {
-			alert("Thank you!");
-			setTimeout(function() {
-				// Done Functions
-				th.trigger("reset");
-			}, 1000);
-		});
-		return false;
-	});
-
-	//Chrome Smooth Scroll
-	try {
-		$.browserSelector();
-		if($("html").hasClass("chrome")) {
-			$.smoothScroll();
-		}
-	} catch(err) {
-
-	};
-
-	$("img, a").on("dragstart", function(event) { event.preventDefault(); });
+    menu()
 
 });
