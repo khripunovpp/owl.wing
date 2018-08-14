@@ -339,10 +339,19 @@ select::-ms-expand
 	&__right
 		color: $color
 	&__close
-		display: inline-block
 		position: absolute
-		top: 0
-		right: 0
+		top: 75px
+		right: 75px
+		width: 45px
+		height: 45px
+		border: none
+		cursor: pointer
+		background-color: transparent
+		&::before
+			@extend %icon
+			content: '\e901'
+			color: $color
+			font-size: 25px
 	&__socials
 		.b-socials__item
 				display: block

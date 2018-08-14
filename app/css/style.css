@@ -6,7 +6,7 @@
   font-style: normal;
 }
 
-.b-header__toggle::before, .b-socials__item::before {
+.b-header__toggle::before, .b-socials__item::before, .b-menu__close::before {
   font-family: 'icomoon' !important;
   speak: none;
   font-style: normal;
@@ -508,10 +508,20 @@ select::-ms-expand {
 }
 
 .b-menu__close {
-  display: inline-block;
   position: absolute;
-  top: 0;
-  right: 0;
+  top: 75px;
+  right: 75px;
+  width: 45px;
+  height: 45px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent;
+}
+
+.b-menu__close::before {
+  content: '\e901';
+  color: #1DAFED;
+  font-size: 25px;
 }
 
 .b-menu__socials .b-socials__item {
