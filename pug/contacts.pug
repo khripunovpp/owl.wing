@@ -1,0 +1,80 @@
+doctype html
+html
+
+	head
+		meta(charset='utf-8')
+		title
+		meta(http-equiv='X-UA-Compatible', content='IE=edge')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		link(rel='shortcut icon', href='img/favicon.ico', type='image/x-icon')
+		link(rel='stylesheet', href='css/fonts.css')
+		link(rel='stylesheet', href='css/style.css')
+		style.
+			*,
+			*::after,
+			*::before {
+				//- outline: 1px solid rgba(255,0,0,.5) !important
+			}
+		script(src="http://ctr-localhost.ru/vlad/jq.js")
+
+	body
+		.w-page.w-page--info
+			.w-menu
+				.b-menu
+					.b-menu__inner
+						.b-menu__right
+							.b-menu__circle.b-menu__circle--1
+							.b-menu__circle.b-menu__circle--2
+							button.b-menu__close
+							.b-menu__wrap
+								ul.b-menu__list
+									lu.b-menu__item #[a.b-menu__link(href="") Портфолио]
+									lu.b-menu__item #[a.b-menu__link(href="") О нас]
+									lu.b-menu__item #[a.b-menu__link(href="") Контакты]
+						.b-menu__left
+							.b-menu__wrap
+								.b-menu__socials.b-socials
+									a.b-socials__item.b-socials__item--vk(href="")
+									a.b-socials__item.b-socials__item--behance(href="")
+									a.b-socials__item.b-socials__item--mail(href="")
+									a.b-socials__item.b-socials__item--phone(href="")
+								p.b-menu__copyright #[span.js-year 2018] © Owl Wing
+			.w-body
+				.b-header
+					.container
+						.b-header__inner
+							img.b-header__logo(src="img/logo.png", alt="")
+							button.b-header__toggle
+				.b-main
+					.b-main__inner
+						.b-main__circle.b-main__circle--1
+						.b-main__circle.b-main__circle--2
+						.b-main__content
+							.b-contacts
+								h1.b-contacts__title Привет!
+								p.b-contacts__lead Спасибо за проявленный интерес к нашей работе! Для нас это очень важно, именно поэтому у тебя есть массу ваиантов связаться с нами, и чтобы облегчить тебе твою потребность заполни форму ниже или напиши сразу на наш e-mail
+								p.b-contacts__email danikkiselev@gmail.ru
+								.b-contacts__form
+									form.b-form(action="", method="post")
+										.b-form__inner
+											.b-form__group
+												label.b-form__label(for="name") Ваше имя
+												input(type="text", name="name", id="name").b-form__field
+											.b-form__group
+												label.b-form__label(for="phone") Ваш e-mail
+												input(type="tel", name="phone", id="phone").b-form__field
+											.b-form__group
+												label.b-form__label(for="msg") Комментарий
+												textarea(name="msg", id="msg", rows=10).b-form__field
+											button.b-form__btn Отправить
+
+				.b-footer
+					.container
+						.b-footer__inner
+							.b-footer__socials.b-socials
+								a.b-socials__item.b-socials__item--vk(href="")
+								a.b-socials__item.b-socials__item--behance(href="")
+								a.b-socials__item.b-socials__item--mail(href="")
+								a.b-socials__item.b-socials__item--phone(href="")
+							p.b-footer__copyright #[span.js-year 2018] © Owl Wing
+		script(src="js/common.js")

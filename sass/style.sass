@@ -3,12 +3,11 @@
 @import "mixins"
 
 $color: #1DAFED
-$color-accent: #1441B3
+$color-accent: #1645B9
 $font: 'DINPro-CondensedMedium', sans-serif
 
 html
 	box-sizing: border-box
-	width: 100%
 	height: 100%
 
 *,
@@ -18,13 +17,13 @@ html
 	outline: none
 
 body
-	width: 100%
-	height: 100%
 	margin: 0	
 	overflow-x: hidden
 	font-family: $font
 	line-height: 1.4
-	font-size: 14px
+	font-size: 18px
+	background: $color
+	height: 100%
 	&.menu-opened
 		overflow: hidden
 
@@ -79,22 +78,30 @@ select::-ms-expand
 	@extend %container
 
 .w-page
-	&--single
+	background-color: #fff
+	&--single,
+	&--info
 		height: 100%
 		.w-body
+			background-color: $color
 			display: flex
 			flex-direction: column
 			height: 100%
 		.b-main
-			background-color: $color
-			padding-bottom: 250px
+			padding: 150px 0 50px
+			flex: 1 0 auto
+			&__circle
+				@extend %circle
 		.b-footer
 			background-color: #fff
-			position: relative
-			margin-top: auto
+			flex: 0 0 auto
+	&--info
+		.b-main
+			&__content
+				max-width: 650px
+				margin: 0 auto
 
 .w-body
-	position: relative
 	transition: all .4s
 	&.translated
 		transform: translateX(-50%)
@@ -105,7 +112,7 @@ select::-ms-expand
 	top: 0
 	left: 0
 	width: 100%
-	padding-top: 75px
+	padding-top: 50px
 	&__inner
 		display: -webkit-flex
 		display: -moz-flex
@@ -261,8 +268,7 @@ select::-ms-expand
 
 .b-main
 	overflow: hidden
-	padding: 60px 0 150px
-	height: 100%
+	padding: 60px 0
 	&__inner
 		position: relative
 	&__title
@@ -275,14 +281,14 @@ select::-ms-expand
 		width: 400px
 		height: 400px
 		&--1
-			top: -400px
+			bottom: -200px
 			right: -50px
 		&--2
 			left: -300px
 			top: 280px
 		&--3
-			bottom: -150px
 			right: -100px
+			top: -400px
 	&__dots
 		position: absolute
 		top: 0
@@ -294,14 +300,9 @@ select::-ms-expand
 		background-size: contain
 		background-image: url(../img/dots-accent.png)
 	&__content
-		padding-top: 150px
 
 
 .b-footer
-	position: absolute
-	bottom: 0
-	left: 0
-	width: 100%
 	padding: 25px 0
 	color: $color
 	&__socials,
@@ -422,17 +423,20 @@ select::-ms-expand
 			right: -80px
 
 .b-portfolioSingle
-	display: flex
+	@extend %grid
+	position: relative
+	z-index: 1
 	&__img
-		width: 480px
-		height: 480px
+		width: 430px
+		height: 430px
 		background-size: cover
+		@extend %part
+		vertical-align: middle
 	&__info
-		display: flex
 		color: #fff
-		flex-direction: column
 		padding: 50px 100px
-		justify-content: space-between
+		@extend %part
+		vertical-align: middle
 	&__name
 		text-transform: uppercase
 		font-size: 48px
@@ -442,16 +446,58 @@ select::-ms-expand
 		&:hover
 			text-decoration: underline
 	&__description
-		font-size: 18px
 		display: block
+		margin: 70px 0
 	&__cite
-		font-size: 18px
 		display: block
 		text-decoration: none
 		color: inherit
 		&:hover
 			text-decoration: underline
 
+.b-contacts
+	color: #fff
+	text-align: center
+	&__title
+		margin: 0
+		font-size: 36px
+	&__email
+		font-size: 24px
+		color: $color-accent
+
+
+
+.b-form
+	&__group
+		background-color: #fff
+		border-radius: 20px
+		padding: 7px 14px
+		position: relative
+		&+&
+			margin-top: 30px
+	&__label
+		position: absolute
+		top: 7px
+		left: 14px
+		color: $color
+		cursor: pointer
+	&__field
+		width: 100%
+		font-size: 16px
+		border: none
+		font-family: $font
+	&__btn
+		display: table
+		margin: 30px auto 0
+		font-size: 18px
+		font-family: $font
+		color: #fff
+		background-color: $color-accent
+		border-radius: 10px
+		border: none
+		padding: 10px
+		width: 100%
+		max-width: 160px
 
 
 

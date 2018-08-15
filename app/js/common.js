@@ -19,8 +19,20 @@ var menu = function() {
     });
 }
 
+var isFocus = function() {
+    $('.b-form__field').on('focus', function() {
+        $(this).closest('.b-form__group').find('.b-form__label').fadeOut(200);
+    });
+    $('.b-form__field').on('blur', function() {
+        var value = $(this).val();
+        if(value.length == 0) $(this).closest('.b-form__group').find('.b-form__label').fadeIn(200);
+    });
+}
+
 $(function() {
 
     menu()
+
+    isFocus()
 
 });
