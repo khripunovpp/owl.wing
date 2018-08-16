@@ -18,7 +18,7 @@ html
 		script(src="http://ctr-localhost.ru/vlad/jq.js")
 
 	body
-		.w-page.w-page--single
+		.w-page.w-page--other
 			.w-menu
 				.b-menu
 					.b-menu__inner
@@ -50,14 +50,19 @@ html
 					.b-main__inner
 						.b-main__circle.b-main__circle--1
 						.b-main__circle.b-main__circle--2
-						.b-main__dots
 						.b-main__content
-							.b-portfolioSingle
-								.b-portfolioSingle__img(style="background-image: url(img/portfolio-img-1.jpg);")
-								.b-portfolioSingle__info
-										a.b-portfolioSingle__name(href="") Sheff Log
-										p.b-portfolioSingle__description  Компания занимающаяся транспортной логистикой и грузоперевозками по всей России
-										a.b-portfolioSingle__cite(href="sheff-logg.ru") sheff-logg.ru
+							.container
+								.b-about
+									h1.b-about__title Owl Wing
+									p.b-about__lead Мы команда отпятых креативных людей готовых сломать ваше сознание. Сильная сторона агентства — качественные исследования рынка и аудитории, фирменные стили, графический дизайн и презентационные сайты и многое другое.
+									.b-about__slider.b-slider
+										img(src="img/slide1.png", alt="").b-slider__item
+										img(src="img/slide2.png", alt="").b-slider__item
+										img(src="img/slide3.png", alt="").b-slider__item
+										img(src="img/slide4.png", alt="").b-slider__item
+									h2.b-about__subtitle Наши сильные стороны:
+									p.b-about__text Мы команда отпятых креативных людей готовых сломать ваше сознание. Сильная сторона агентства — качественные исследования рынка и аудитории, фирменные стили, графический дизайн и презентационные сайты и многое другое.
+
 				.b-footer
 					.container
 						.b-footer__inner
@@ -67,4 +72,7 @@ html
 								a.b-socials__item.b-socials__item--mail(href="")
 								a.b-socials__item.b-socials__item--phone(href="")
 							p.b-footer__copyright #[span.js-year 2018] © Owl Wing
+
+		script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js")
+		script(src="js/slick.min.js")
 		script(src="js/common.js")

@@ -80,7 +80,7 @@ select::-ms-expand
 .w-page
 	background-color: #fff
 	&--single,
-	&--info
+	&--other
 		height: 100%
 		.w-body
 			background-color: $color
@@ -95,8 +95,9 @@ select::-ms-expand
 		.b-footer
 			background-color: #fff
 			flex: 0 0 auto
-	&--info
+	&--other
 		.b-main
+			padding: 100px 0 50px
 			&__content
 				max-width: 650px
 				margin: 0 auto
@@ -375,7 +376,7 @@ select::-ms-expand
 		color: $color
 	&__close
 		position: absolute
-		top: 75px
+		top: 55px
 		right: 75px
 		width: 45px
 		height: 45px
@@ -398,6 +399,9 @@ select::-ms-expand
 		margin-top: 20px
 		font-size: 24px
 		line-height: 1
+	&__list
+		position: relative
+		z1
 	&__item
 		display: block
 		&+&
@@ -458,23 +462,25 @@ select::-ms-expand
 .b-contacts
 	color: #fff
 	text-align: center
+	position: relative
+	z1
 	&__title
 		margin: 0
 		font-size: 36px
 	&__email
 		font-size: 24px
 		color: $color-accent
-
-
+		margin: 0
 
 .b-form
+	margin-top: 15px
 	&__group
 		background-color: #fff
 		border-radius: 20px
 		padding: 7px 14px
 		position: relative
 		&+&
-			margin-top: 30px
+			margin-top: 20px
 	&__label
 		position: absolute
 		top: 7px
@@ -499,6 +505,39 @@ select::-ms-expand
 		width: 100%
 		max-width: 160px
 
+.b-about
+	color: #fff
+	text-align: center
+	&__title
+		font-size: 36px
+		margin: 0
+
+.b-slider
+	overflow: hidden
+	font-size: 0
+	position: relative
+	margin: 0 auto
+
+.slick-dots
+	position: absolute
+	bottom: 25px
+	left: 50%
+	transform: translateX(-50%)
+	li
+		display: inline-block
+		width: 10px
+		height: 10px
+		background-color: $color
+		border-radius: 50%
+		margin: 0 5px
+		&.slick-active
+			background-color: $color-accent
+
+	button
+		padding: 0
+		font-size: 0
+		background-color: transparent
+		border: none
 
 
 //ALWAYS END

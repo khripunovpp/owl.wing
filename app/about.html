@@ -18,7 +18,7 @@
     <script src="http://ctr-localhost.ru/vlad/jq.js"></script>
   </head>
   <body>
-    <div class="w-page w-page--single">
+    <div class="w-page w-page--other">
       <div class="w-menu">
         <div class="b-menu">
           <div class="b-menu__inner">
@@ -28,9 +28,9 @@
               <button class="b-menu__close"></button>
               <div class="b-menu__wrap">
                 <ul class="b-menu__list">
-                  <lu class="b-menu__item"><a class="b-menu__link" href="">Портфолио</a></lu>
-                  <lu class="b-menu__item"><a class="b-menu__link" href="">О нас</a></lu>
-                  <lu class="b-menu__item"><a class="b-menu__link" href="">Контакты</a></lu>
+                  <li class="b-menu__item"><a class="b-menu__link" href="index.html#portfolio">Портфолио</a></li>
+                  <li class="b-menu__item"><a class="b-menu__link" href="about.html">О нас</a></li>
+                  <li class="b-menu__item"><a class="b-menu__link" href="contacts.html">Контакты</a></li>
                 </ul>
               </div>
             </div>
@@ -46,7 +46,7 @@
       <div class="w-body">
         <div class="b-header">
           <div class="container">
-            <div class="b-header__inner"><img class="b-header__logo" src="img/logo.png" alt="">
+            <div class="b-header__inner"><a href="index.html"><img class="b-header__logo" src="img/logo.png" alt=""></a>
               <button class="b-header__toggle"></button>
             </div>
           </div>
@@ -55,12 +55,14 @@
           <div class="b-main__inner">
             <div class="b-main__circle b-main__circle--1"></div>
             <div class="b-main__circle b-main__circle--2"></div>
-            <div class="b-main__dots"></div>
             <div class="b-main__content">
-              <div class="b-portfolioSingle">
-                <div class="b-portfolioSingle__img" style="background-image: url(img/portfolio-img-1.jpg);"></div>
-                <div class="b-portfolioSingle__info"><a class="b-portfolioSingle__name" href="">Sheff Log</a>
-                  <p class="b-portfolioSingle__description"> Компания занимающаяся транспортной логистикой и грузоперевозками по всей России</p><a class="b-portfolioSingle__cite" href="sheff-logg.ru">sheff-logg.ru</a>
+              <div class="container">
+                <div class="b-about">
+                  <h1 class="b-about__title">Owl Wing</h1>
+                  <p class="b-about__lead">Мы команда отпятых креативных людей готовых сломать ваше сознание. Сильная сторона агентства — качественные исследования рынка и аудитории, фирменные стили, графический дизайн и презентационные сайты и многое другое.</p>
+                  <div class="b-about__slider b-slider"><img class="b-slider__item" src="img/slide1.png" alt=""><img class="b-slider__item" src="img/slide2.png" alt=""><img class="b-slider__item" src="img/slide3.png" alt=""><img class="b-slider__item" src="img/slide4.png" alt=""></div>
+                  <h2 class="b-about__subtitle">Наши сильные стороны:</h2>
+                  <p class="b-about__text">Мы команда отпятых креативных людей готовых сломать ваше сознание. Сильная сторона агентства — качественные исследования рынка и аудитории, фирменные стили, графический дизайн и презентационные сайты и многое другое.</p>
                 </div>
               </div>
             </div>
@@ -76,6 +78,8 @@
         </div>
       </div>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/slick.min.js"></script>
     <script src="js/common.js"></script>
   </body>
 </html>

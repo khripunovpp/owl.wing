@@ -28,9 +28,9 @@ html
 							button.b-menu__close
 							.b-menu__wrap
 								ul.b-menu__list
-									lu.b-menu__item #[a.b-menu__link(href="") Портфолио]
-									lu.b-menu__item #[a.b-menu__link(href="") О нас]
-									lu.b-menu__item #[a.b-menu__link(href="") Контакты]
+									li.b-menu__item #[a.b-menu__link(href="index.html#portfolio") Портфолио]
+									li.b-menu__item #[a.b-menu__link(href="about.html") О нас]
+									li.b-menu__item #[a.b-menu__link(href="contacts.html") Контакты]
 						.b-menu__left
 							.b-menu__wrap
 								.b-menu__socials.b-socials
@@ -43,7 +43,8 @@ html
 				.b-header
 					.container
 						.b-header__inner
-							img.b-header__logo(src="img/logo.png", alt="")
+							a(href="index.html")
+								img.b-header__logo(src="img/logo.png", alt="")
 							button.b-header__toggle
 				.b-hero
 					.container
@@ -58,7 +59,7 @@ html
 							.b-main__circle.b-main__circle--2
 							.b-main__circle.b-main__circle--3
 							.b-main__dots
-							h1.b-main__title Наши работы
+							h1.b-main__title(id="portfolio") Наши работы
 							.b-portfolio
 								ul.b-portfolio__list
 									li.b-portfolio__item

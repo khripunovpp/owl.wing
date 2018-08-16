@@ -18,7 +18,7 @@
     <script src="http://ctr-localhost.ru/vlad/jq.js"></script>
   </head>
   <body>
-    <div class="w-page w-page--info">
+    <div class="w-page w-page--other">
       <div class="w-menu">
         <div class="b-menu">
           <div class="b-menu__inner">
@@ -28,9 +28,9 @@
               <button class="b-menu__close"></button>
               <div class="b-menu__wrap">
                 <ul class="b-menu__list">
-                  <lu class="b-menu__item"><a class="b-menu__link" href="">Портфолио</a></lu>
-                  <lu class="b-menu__item"><a class="b-menu__link" href="">О нас</a></lu>
-                  <lu class="b-menu__item"><a class="b-menu__link" href="">Контакты</a></lu>
+                  <li class="b-menu__item"><a class="b-menu__link" href="index.html#portfolio">Портфолио</a></li>
+                  <li class="b-menu__item"><a class="b-menu__link" href="about.html">О нас</a></li>
+                  <li class="b-menu__item"><a class="b-menu__link" href="contacts.html">Контакты</a></li>
                 </ul>
               </div>
             </div>
@@ -46,7 +46,7 @@
       <div class="w-body">
         <div class="b-header">
           <div class="container">
-            <div class="b-header__inner"><img class="b-header__logo" src="img/logo.png" alt="">
+            <div class="b-header__inner"><a href="index.html"><img class="b-header__logo" src="img/logo.png" alt=""></a>
               <button class="b-header__toggle"></button>
             </div>
           </div>
@@ -56,28 +56,30 @@
             <div class="b-main__circle b-main__circle--1"></div>
             <div class="b-main__circle b-main__circle--2"></div>
             <div class="b-main__content">
-              <div class="b-contacts">
-                <h1 class="b-contacts__title">Привет!</h1>
-                <p class="b-contacts__lead">Спасибо за проявленный интерес к нашей работе! Для нас это очень важно, именно поэтому у тебя есть массу ваиантов связаться с нами, и чтобы облегчить тебе твою потребность заполни форму ниже или напиши сразу на наш e-mail</p>
-                <p class="b-contacts__email">danikkiselev@gmail.ru</p>
-                <div class="b-contacts__form">
-                  <form class="b-form" action="" method="post">
-                    <div class="b-form__inner">
-                      <div class="b-form__group">
-                        <label class="b-form__label" for="name">Ваше имя</label>
-                        <input class="b-form__field" type="text" name="name" id="name">
+              <div class="container">
+                <div class="b-contacts">
+                  <h1 class="b-contacts__title">Привет!</h1>
+                  <p class="b-contacts__lead">Спасибо за проявленный интерес к нашей работе! Для нас это очень важно, именно поэтому у тебя есть массу ваиантов связаться с нами, и чтобы облегчить тебе твою потребность заполни форму ниже или напиши сразу на наш e-mail</p>
+                  <p class="b-contacts__email">danikkiselev@gmail.ru</p>
+                  <div class="b-contacts__form">
+                    <form class="b-form" action="" method="post">
+                      <div class="b-form__inner">
+                        <div class="b-form__group">
+                          <label class="b-form__label" for="name">Ваше имя</label>
+                          <input class="b-form__field" type="text" name="name" id="name">
+                        </div>
+                        <div class="b-form__group">
+                          <label class="b-form__label" for="phone">Ваш e-mail</label>
+                          <input class="b-form__field" type="tel" name="phone" id="phone">
+                        </div>
+                        <div class="b-form__group">
+                          <label class="b-form__label" for="msg">Комментарий</label>
+                          <textarea class="b-form__field" name="msg" id="msg" rows="3"></textarea>
+                        </div>
+                        <button class="b-form__btn">Отправить</button>
                       </div>
-                      <div class="b-form__group">
-                        <label class="b-form__label" for="phone">Ваш e-mail</label>
-                        <input class="b-form__field" type="tel" name="phone" id="phone">
-                      </div>
-                      <div class="b-form__group">
-                        <label class="b-form__label" for="msg">Комментарий</label>
-                        <textarea class="b-form__field" name="msg" id="msg" rows="10"></textarea>
-                      </div>
-                      <button class="b-form__btn">Отправить</button>
-                    </div>
-                  </form>
+                    </form>
+                  </div>
                 </div>
               </div>
             </div>
