@@ -3,13 +3,77 @@
 
 /* Desktop-frist */
 @media only screen and (max-width : 991px)
-	/**/
 
+	body
+		font-size: 15px
 
-/* Mobile-first */
-@media only screen and (min-width : 992px)
-	/**/
+		.container
+			max-width: 600px
 
+	.b-header
+		padding-top: 25px
+		&__logo
+			width: 120px
+
+	.b-hero
+		&__inner
+			min-height: 300px
+		&__slogan
+			width: 100%
+			max-width: 400px
+			font-size: 26px
+			line-height: 1.2
+
+	.b-main
+		padding: 50px 0
+		&__title
+			font-size: 26px
+		&__dots
+			display: none
+
+	.b-portfolio
+		&__list
+			margin: 0 -20px
+		&__item
+			flex: 0 1 calc(50% - 30px)
+			margin: 10px
+			height: 200px
+
+	.b-footer
+		text-align: center
+		&__copyright
+			font-size: 13px
+
+	.b-socials
+		&__item
+			&::before
+				font-size: 22px
+			&+&
+				margin-left: 15px
+
+	.b-menu
+		&__inner
+			flex-direction: column
+		&__right,
+		&__left
+			width: 100%
+			flex: 1 1 auto
+		&__close
+			top: 25px
+			right: 15px
+		&__link
+			font-size: 24px
+		&__copyright
+			font-size: 13px
+
+@media only screen and (max-width : 480px)
+	.b-portfolio
+		&__list
+			margin: 0
+		&__item
+			flex: 0 1 100%
+			height: 250px
+			margin: 15px 0
 
 @media only screen and (max-height: 900px)
 	.b-slider

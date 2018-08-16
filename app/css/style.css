@@ -238,16 +238,19 @@ select::-ms-expand {
   color: #fff;
   padding-left: 35px;
   position: relative;
+  width: 60%;
 }
 
 .b-hero__slogan::after {
   content: '';
   position: absolute;
-  top: 0;
+  top: 50%;
   left: 0;
   bottom: 0;
   width: 20px;
-  background-image: url(../img/dot.png);
+  height: 70px;
+  margin-top: -35px;
+  background-image: url(../img/dots-hero.png);
   background-repeat: repeat-y;
 }
 
@@ -418,7 +421,7 @@ select::-ms-expand {
 
 .b-main {
   overflow: hidden;
-  padding: 60px 0;
+  padding: 100px 0 50px;
 }
 
 .b-main__inner {
@@ -823,12 +826,97 @@ select::-ms-expand {
 
 /* Desktop-frist */
 @media only screen and (max-width: 991px) {
-  /**/
+  body {
+    font-size: 15px;
+  }
+  body .container {
+    max-width: 600px;
+  }
+  .b-header {
+    padding-top: 25px;
+  }
+  .b-header__logo {
+    width: 120px;
+  }
+  .b-hero__inner {
+    min-height: 300px;
+  }
+  .b-hero__slogan {
+    width: 100%;
+    max-width: 400px;
+    font-size: 26px;
+    line-height: 1.2;
+  }
+  .b-main {
+    padding: 50px 0;
+  }
+  .b-main__title {
+    font-size: 26px;
+  }
+  .b-main__dots {
+    display: none;
+  }
+  .b-portfolio__list {
+    margin: 0 -20px;
+  }
+  .b-portfolio__item {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 -webkit-calc(50% - 30px);
+    -ms-flex: 0 1 calc(50% - 30px);
+    flex: 0 1 calc(50% - 30px);
+    margin: 10px;
+    height: 200px;
+  }
+  .b-footer {
+    text-align: center;
+  }
+  .b-footer__copyright {
+    font-size: 13px;
+  }
+  .b-socials__item::before {
+    font-size: 22px;
+  }
+  .b-socials__item + .b-socials__item {
+    margin-left: 15px;
+  }
+  .b-menu__inner {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+  }
+  .b-menu__right, .b-menu__left {
+    width: 100%;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 auto;
+    -ms-flex: 1 1 auto;
+    flex: 1 1 auto;
+  }
+  .b-menu__close {
+    top: 25px;
+    right: 15px;
+  }
+  .b-menu__link {
+    font-size: 24px;
+  }
+  .b-menu__copyright {
+    font-size: 13px;
+  }
 }
 
-/* Mobile-first */
-@media only screen and (min-width: 992px) {
-  /**/
+@media only screen and (max-width: 480px) {
+  .b-portfolio__list {
+    margin: 0;
+  }
+  .b-portfolio__item {
+    -webkit-box-flex: 0;
+    -webkit-flex: 0 1 100%;
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    height: 250px;
+    margin: 15px 0;
+  }
 }
 
 @media only screen and (max-height: 900px) {

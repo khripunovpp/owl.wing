@@ -157,14 +157,17 @@ select::-ms-expand
 		color: #fff
 		padding-left: 35px
 		position: relative
+		width: 60%
 		&::after
 			content: ''
 			position: absolute
-			top: 0
+			top: 50%
 			left: 0
 			bottom: 0
 			width: 20px
-			background-image: url(../img/dot.png)
+			height: 70px
+			margin-top: -35px
+			background-image: url(../img/dots-hero.png)
 			background-repeat: repeat-y
 	&__circle
 		@extend %circle
@@ -269,7 +272,7 @@ select::-ms-expand
 
 .b-main
 	overflow: hidden
-	padding: 60px 0
+	padding: 100px 0 50px
 	&__inner
 		position: relative
 	&__title
