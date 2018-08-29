@@ -83,6 +83,9 @@ select::-ms-expand
 	&--other
 		height: 100%
 		.w-body
+			background-image: url(../img/bg.jpg)
+			background-position: 50% 100%
+			background-size: cover
 			background-color: $color
 			display: flex
 			flex-direction: column
@@ -92,6 +95,10 @@ select::-ms-expand
 			flex: 1 0 auto
 			&__circle
 				@extend %circle
+			&__dots
+				bottom: -120px
+				top: auto
+				right: 540px
 		.b-footer
 			background-color: #fff
 			flex: 0 0 auto
@@ -138,6 +145,9 @@ select::-ms-expand
 
 .b-hero
 	background-color: $color
+	background-image: url(../img/bg.jpg)
+	background-position: 50% 100%
+	background-size: cover
 	overflow: hidden
 	position: relative
 	&__inner
@@ -177,7 +187,7 @@ select::-ms-expand
 			top: 180px
 			left: -200px
 		&--2
-			top: 250px
+			top: 200px
 			right: -250px
 
 .b-portfolio
@@ -373,7 +383,10 @@ select::-ms-expand
 		position: relative
 		opacity: .99
 	&__left
+		background-image: url(../img/bg.jpg)
+		background-position: 50% 100%
 		background-color: $color
+		background-size: cover
 		color: #fff
 	&__right
 		color: $color
@@ -437,6 +450,7 @@ select::-ms-expand
 		width: 430px
 		height: 430px
 		background-size: cover
+		background-position: 50% 50%
 		@extend %part
 		vertical-align: middle
 	&__info
@@ -484,6 +498,11 @@ select::-ms-expand
 		position: relative
 		&+&
 			margin-top: 20px
+		&.disabled
+			background-color: #ebebe4
+			*
+				cursor: no-drop
+				user-select: none
 	&__label
 		position: absolute
 		top: 7px
@@ -495,6 +514,8 @@ select::-ms-expand
 		font-size: 16px
 		border: none
 		font-family: $font
+		&[disabled]
+			background-color: #ebebe4
 	&__btn
 		display: table
 		margin: 30px auto 0
@@ -507,6 +528,11 @@ select::-ms-expand
 		padding: 10px
 		width: 100%
 		max-width: 160px
+		cursor: pointer
+		&[disabled]
+			background-color: #7182ad
+			cursor: no-drop
+			user-select: none
 
 .b-about
 	color: #fff
@@ -535,12 +561,41 @@ select::-ms-expand
 		margin: 0 5px
 		&.slick-active
 			background-color: $color-accent
-
 	button
 		padding: 0
 		font-size: 0
 		background-color: transparent
 		border: none
+
+.c-notify
+	position: fixed
+	z-index: 3
+	top: -25px
+	left: 50%
+	transform: translateX(-50%)
+	width: 100%
+	max-width: 250px
+	margin: 10px 0 0
+	padding: 8px 30px
+	font-size: 15px
+	text-align: center
+	border-radius: 20px
+	border: 2px solid
+	color: #000
+	background-color: #fff
+	opacity: 0
+	animation: notify .2s cubic-bezier(0.25, 0.46, 0.45, 0.94) both
+	&--error
+		color: #e05f5f
+		border-color: currentColor
+	&--success
+		color: #3ebb3e
+		border-color: currentColor
+
+@keyframes notify
+	to
+		opacity: 1
+		top: 0
 
 
 //ALWAYS END

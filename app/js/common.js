@@ -42,18 +42,108 @@ var isFocus = function() {
     });
 }
 
+var sendForm = function(btn) {
+    $(btn).on('click', function(event) {
+        event.preventDefault();
+        var form = $(this).closest('form');
+        ajax(form);
+    });
+}
+
+var ajax = function(form) {
+
+    function randomInteger(min, max) {
+        var rand = min - 0.5 + Math.random() * (max - min + 1)
+        rand = Math.round(rand);
+        return rand;
+    }
+
+    function isNumeric(n) {
+        return !isNaN(parseFloat(n)) && isFinite(n);
+    }
+
+    var sessionNumber = randomInteger(10000, 99999);
+
+    // var formtarget = form,
+    //     msg = $(formtarget).serialize(),
+    //     jqxhr = $.post("./ajax.php", msg, onAjaxSuccess);
+
+
+
+
+
+
+
+
+
+
+
+    /* данные для теста */
+
+    $.getJSON("./data.json", function(data) {
+        onAjaxSuccess(data);
+    });
+
+    /* данные для теста */
+
+
+
+
+
+
+    
+
+    function onAjaxSuccess(json) {
+
+        // var json = JSON.parse(data),
+        var status = json.status,
+            message = json.message;
+
+        if (status === 'success') {
+            $('input, textarea, button', form).each(function() {
+                $(this).prop("disabled", "true");
+                $(this).parent().addClass('disabled')
+            });
+
+        }
+
+        clearNotify();
+        addNotify(status, message, sessionNumber)
+
+    }
+
+    var addNotify = function(status, message, id) {
+        $('body').append('<p class="c-notify c-notify--' + status + '" id="' + id + '">' + message + '</p>');
+        setTimeout(function() {
+            clearNotify(id)
+        }, 8000)
+    }
+
+    var clearNotify = function(id) {
+        var selector = '.c-notify';
+        if (isNumeric(id)) selector = '#' + id;
+
+        $('body').find(selector).remove();
+    }
+
+}
+
 $(function() {
 
     menu()
 
     isFocus()
 
-    $('.b-slider').slick({
-        infinite: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        arrows: false,
-        dots: true
-    });
+    sendForm('.b-form__btn');
+
+    if ($('.b-slider').length > 0) {
+        $('.b-slider').slick({
+            infinite: true,
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            arrows: false,
+            dots: true
+        })
+    }
 
 });
