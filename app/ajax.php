@@ -1,16 +1,16 @@
 ﻿<?php
 
 $name = htmlspecialchars($_POST["name"]);
-$phone = htmlspecialchars($_POST["phone"]);
+$email = htmlspecialchars($_POST["email"]);
 $form = htmlspecialchars($_POST["msg"]);
 
-if (!empty($phone)) {
+if (!empty($email)) {
 
-	$to = 'khripunovpp@gmail.com, danikkiselev@gmail.ru';
+	$to = 'khripunovpp@gmail.com';
 	$subject = 'Новый заказ';
 	$headers  = 'MIME-Version: 1.0' . "\r\n";
 	$headers .= 'Content-type: text/html; utf-8' . "\r\n";
-	$headers .= 'From: OWL-WING <info@owl-wing.ru>' . "\r\n";
+	$headers .= 'From: OWL-WING <info@owlwing.ru>' . "\r\n";
 	$message = "
 							<table>
 								<tr>
@@ -18,8 +18,8 @@ if (!empty($phone)) {
 									<td>$name</td>
 								</tr>
 								<tr>
-									<td><b>Контактный телефон</b></td>
-									<td>$tell</td>
+									<td><b>Контакт</b></td>
+									<td>$email</td>
 								</tr>
 								<tr>
 									<td><b>Сообщение</b></td>
@@ -33,11 +33,11 @@ if (!empty($phone)) {
 				
 	mail($to, $subject, $message, $headers);
 
-	$jsonout = '{"status": "success", "Спасибо! Ваша заявка принята."}';
+	$jsonout = '{"status": "success", "message": "Спасибо! Ваша заявка принята."}';
 
 } else {
 
-	$jsonout = '{"status": "error", "Без номера телефона мы не сможем связаться с вами!"}';
+	$jsonout = '{"status": "error", "message": "Без адреса електронной почты мы не сможем связаться с вами!"}';
 	
 }
 

@@ -64,43 +64,18 @@ var ajax = function(form) {
 
     var sessionNumber = randomInteger(10000, 99999);
 
-    // var formtarget = form,
-    //     msg = $(formtarget).serialize(),
-    //     jqxhr = $.post("./ajax.php", msg, onAjaxSuccess);
+    var formtarget = form,
+        msg = $(formtarget).serialize(),
+        jqxhr = $.post("./ajax.php", msg, onAjaxSuccess);
 
+    function onAjaxSuccess(data) {
 
-
-
-
-
-
-
-
-
-
-    /* данные для теста */
-
-    $.getJSON("./data.json", function(data) {
-        onAjaxSuccess(data);
-    });
-
-    /* данные для теста */
-
-
-
-
-
-
-    
-
-    function onAjaxSuccess(json) {
-
-        // var json = JSON.parse(data),
-        var status = json.status,
+        var json = JSON.parse(data),
+            status = json.status,
             message = json.message;
 
         if (status === 'success') {
-            $('input, textarea, button', form).each(function() {
+            $('input, textarea, button', formtarget).each(function() {
                 $(this).prop("disabled", "true");
                 $(this).parent().addClass('disabled')
             });
